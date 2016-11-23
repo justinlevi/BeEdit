@@ -18,9 +18,11 @@ function beedit_theme() {
       'template' => 'feature-run-output',
     ],
     'basic_feature' => [
+      'variables' => [],
       'template' => 'basic-feature',
     ],
     'scenario_outline' => [
+      'variables' => [],
       'template' => 'scenario-outline',
     ],
   ];
