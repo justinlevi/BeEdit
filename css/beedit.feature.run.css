@@ -1,0 +1,40 @@
+#beedit-feature-run-status .throbber span {
+  margin-left: 20px;
+}
+
+#beedit-feature-run-output {
+  font-family: "Courier New";
+  white-space: nowrap;
+}
+
+#beedit-feature-run-output .ansi-bold {
+  font-weight: bold;
+}
+
+#beedit-feature-run-output .ansi-black {
+  color: silver;
+}
+
+#beedit-feature-run-output .ansi-red {
+  color: red;
+}
+
+#beedit-feature-run-output .ansi-green {
+  color: green;
+}
+
+#beedit-feature-run-output .ansi-cyan {
+  color: blue;
+}
+
+#beedit-feature-run-output .ansi-yellow {
+  color: darkorange;
+}
+
+#beedit-feature-run-output .ansi-white {
+  color: red;
+}
+
+#beedit-feature-run-output .ansi-bg-red {
+  font-weight: bold;
+}

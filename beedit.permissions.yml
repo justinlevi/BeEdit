@@ -1,0 +1,6 @@
+view behat features:
+  title: 'View and run Behat features.'
+maintain behat features:
+  title: 'Maintain Behat features. Operations include creating, editing and deleting features.'
+administer beedit settings:
+  title: 'Administer BeEdit Settings.'

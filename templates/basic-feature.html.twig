@@ -1,0 +1,19 @@
+<pre>
+<div class="clipboard">
+@api
+Feature: Create news articles
+  In order to provide news
+  As an "Administrator"
+  I should be able to create news articles
+
+  Background:
+    Given I am logged in as a "Administrator"
+
+  Scenario: Create and publish article
+    When I go to "node/add/article"
+      And I enter "Test Article" for "Title"
+      And I enter "Blah, blah, blah!" for "Body"
+      And I press "Save and publish"
+    Then I should see the heading "Test Article"
+</div>
+</pre>

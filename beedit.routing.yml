@@ -1,0 +1,72 @@
+beedit.list:
+  path: '/admin/config/development/beedit'
+  defaults:
+    _title: 'BeEdit'
+    _form: '\Drupal\beedit\Form\BeEditListForm'
+  requirements:
+    _permission: 'view behat features'
+
+beedit.add:
+  path: '/admin/config/development/beedit/feature'
+  defaults:
+    _title: 'Add Feature'
+    _form: '\Drupal\beedit\Form\BeEditFeatureForm'
+  requirements:
+    _permission: 'maintain behat features'
+
+beedit.view:
+  path: '/admin/config/development/beedit/feature/{feature_name_subpath}'
+  defaults:
+    _title: 'View Feature'
+    _controller: '\Drupal\beedit\Controller\BeEditController::view'
+  requirements:
+    _permission: 'view behat features'
+    feature_name_subpath: '.+'
+
+beedit.edit:
+  path: '/admin/config/development/beedit/feature/{feature_name_subpath}/edit'
+  defaults:
+    _title: 'Edit Feature'
+    _form: '\Drupal\beedit\Form\BeEditFeatureForm'
+  requirements:
+    _permission: 'maintain behat features'
+    feature_name_subpath: '.+'
+
+beedit.run:
+  path: '/admin/config/development/beedit/feature/{feature_name_subpath}/run'
+  defaults:
+    _title: 'Run Feature'
+    _controller: '\Drupal\beedit\Controller\BeEditController::run'
+  requirements:
+    _permission: 'view behat features'
+    feature_name_subpath: '.+'
+
+beedit.delete:
+  path: '/admin/config/development/beedit/feature/{feature_name_subpath}/delete'
+  defaults:
+    _title: 'Delete Feature'
+    _form: '\Drupal\beedit\Form\BeEditDeleteForm'
+  requirements:
+    _permission: 'maintain behat features'
+    feature_name_subpath: '.+'
+
+beedit.settings:
+  path: '/admin/config/development/beedit/settings'
+  defaults:
+    _title: 'BeEdit Settings'
+    _form: '\Drupal\beedit\Form\BeEditSettingsForm'
+  requirements:
+    _permission: 'administer beedit settings'
+
+beedit.run_status:
+  path: '/beedit/run_status/{pid}/{file_id}/{line_number}'
+  defaults:
+    _title: 'Run Status'
+    _controller: '\Drupal\beedit\Controller\BeEditController::runStatus'
+    pid: 0
+    file_id: 0
+    line_number: 0
+  requirements:
+    _permission: 'view behat features'
+  options:
+    no_cache: TRUE

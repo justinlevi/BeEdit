@@ -1,0 +1,35 @@
+beedit.tab_features:
+  route_name : beedit.list
+  title: Behat Features
+  base_route: beedit.list
+  weight: 0
+
+beedit.tab_settings:
+  route_name : beedit.settings
+  title: Settings
+  base_route: beedit.list
+  weight: 5
+
+beedit.tab_view:
+  route_name : beedit.view
+  title: View
+  base_route: beedit.view
+  weight: 10
+
+beedit.tab_edit:
+  route_name: beedit.edit
+  title: Edit
+  base_route: beedit.view
+  weight: 20
+
+beedit.tab_run:
+  route_name: beedit.run
+  title: Run
+  base_route: beedit.view
+  weight: 30
+
+beedit.tab_delete:
+  route_name: beedit.delete
+  title: Delete
+  base_route: beedit.view
+  weight: 40

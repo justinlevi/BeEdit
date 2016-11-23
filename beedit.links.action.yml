@@ -1,0 +1,6 @@
+beedit.feature_add:
+  route_name: beedit.add
+  title: 'Add Behat Feature'
+  weight: 1
+  appears_on:
+    - beedit.list

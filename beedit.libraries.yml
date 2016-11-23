@@ -1,0 +1,26 @@
+beedit.feature.list:
+  version: 1.x
+  css:
+    theme:
+      css/beedit.feature.list.css: {}
+
+beedit.feature.edit:
+  version: 1.x
+  css:
+    theme:
+      css/beedit.feature.edit.css: {}
+  js:
+    js/beedit.feature.edit.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.ui.resizable
+
+beedit.feature.run:
+  version: 1.x
+  css:
+    theme:
+      css/beedit.feature.run.css: {}
+  js:
+    js/beedit.feature.run.js: {}
+  dependencies:
+    - core/jquery

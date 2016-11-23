@@ -1,0 +1,4 @@
+name: BeEdit 
+description: 'Behat Feature Editor'
+type: module
+core: 8.x

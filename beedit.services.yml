@@ -1,0 +1,5 @@
+services:
+ beedit.breadcrumb:
+   class: Drupal\beedit\Breadcrumb\BeEditBreadcrumbBuilder
+   tags:
+    - { name: breadcrumb_builder, priority: 100 }

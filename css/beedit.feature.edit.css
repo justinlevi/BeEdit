@@ -1,0 +1,62 @@
+/* Split form into left and right halves */
+#beedit-feature-form {
+  width: 100%;
+}
+
+.beedit-edit-form-main {
+  float: left;
+  width: 49%;
+}
+
+.beedit-edit-form-secondary {
+  float: right;
+  width: 49%;
+}
+
+/* Step definition list styling */
+div.clipboard {
+  padding: 5px;
+  border-bottom: 1px #dddddd solid;
+}
+
+div.clipboard:hover {
+  background-color: #cccccc;
+}
+
+/* Filter field in step definition panel */
+div.js-form-item-filter {
+  position: relative;
+}
+
+div.js-form-item-filter span {
+  position: absolute;
+  display: inline-block;
+  margin-left: -20px;
+  margin-top: 4px;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #888888;
+  visibility: hidden;
+}
+
+div.js-form-item-filter span:hover {
+  color: #cc0000;
+}
+
+div.js-form-item-filter input {
+  padding-right: 16px;
+}
+
+/* Folder and New Folder field styling */
+#beedit-feature-folder-wrapper {
+  display: inline-block;
+}
+
+.form-item-new-folder {
+  display: inline-block;
+  position: relative;
+  left: 30px;
+  top: 2px;
+}

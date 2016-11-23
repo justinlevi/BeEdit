@@ -1,0 +1,9 @@
+#edit-filter-fields .form-item {
+  float: left;
+  margin-right: 0.5em;
+}
+
+#edit-filter-buttons {
+  clear: left;
+  margin: 1em 0em;
+}

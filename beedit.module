@@ -1,0 +1,29 @@
+<?php
+
+/**
+ * @file
+ * BeEdit hooks.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function beedit_theme() {
+  $theme = [
+    'feature_run_output' => [
+      'variables' => [
+        'pid' => NULL,
+        'file_id' => NULL,
+      ],
+      'template' => 'feature-run-output',
+    ],
+    'basic_feature' => [
+      'template' => 'basic-feature',
+    ],
+    'scenario_outline' => [
+      'template' => 'scenario-outline',
+    ],
+  ];
+
+  return $theme;
+}
