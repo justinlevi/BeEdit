@@ -29,6 +29,9 @@ class BeEditFeatureManager extends BehatFeatureManager {
       drupal_set_message(t('Behat Project Root needs to be set.'), 'error');
     }
 
+    // Get Behat extra config settings
+    $this->behatConfig = $config->get('beedit_behat_config');
+
     // Get Drupal temp file path.
     $this->drupalTempPath = file_directory_temp();
   }

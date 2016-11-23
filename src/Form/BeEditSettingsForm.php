@@ -40,6 +40,13 @@ class BeEditSettingsForm extends ConfigFormBase {
       '#default_value' => $config->get('beedit_behat_bin'),
     ];
 
+    $form['beedit_behat_config'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Additional Config Settings'),
+      '#description' => $this->t('Specify additional paramaters Example: `--config=local.yml -p local`'),
+      '#default_value' => $config->get('beedit_behat_config'),
+    ];
+
     $form['beedit_behat_project_root'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Behat Project Folder'),
@@ -79,6 +86,9 @@ class BeEditSettingsForm extends ConfigFormBase {
       ->save();
 
     $config->set('beedit_behat_project_root', $form_state->getValue('beedit_behat_project_root'))
+      ->save();
+
+    $config->set('beedit_behat_config', $form_state->getValue('beedit_behat_config'))
       ->save();
 
     parent::submitForm($form, $form_state);

@@ -12,6 +12,7 @@ namespace Drupal\beedit;
 abstract class BehatFeatureManager implements BehatFeatureManagerInterface {
   protected $behatProjectRoot;
   protected $behatBin;
+  protected $behatConfig;
   protected $featuresRootPath;
   protected $featureFullPath;
   protected $sortField;
@@ -43,7 +44,7 @@ abstract class BehatFeatureManager implements BehatFeatureManagerInterface {
    * Load BeEdit settings..
    *
    * This method loads configuration settings and updates the variables
-   * $behatProjectRoot, $behatBin and $drupalTempPath.
+   * $behatProjectRoot, $behatBin, $behatConfig, and $drupalTempPath.
    *
    * This method is overridden in the extended class BeEditFeatureManager.php
    * to allow for different Drupal versions.
@@ -51,6 +52,7 @@ abstract class BehatFeatureManager implements BehatFeatureManagerInterface {
   public function loadSettings() {
     $this->behatProjectRoot = '';
     $this->behatBin = '';
+    $this->behatConfig = '';
   }
 
   /**
@@ -169,7 +171,7 @@ abstract class BehatFeatureManager implements BehatFeatureManagerInterface {
     $filename = "$this->drupalTempPath/beedit_$timestamp.txt";
 
     // Run behat command as a separate process and store output in temp folder.
-    $command = "cd $this->behatProjectRoot && $this->behatBin --colors 'features/$this->featureName.feature' > $filename & echo $!";
+    $command = "cd $this->behatProjectRoot && $this->behatBin $this->behatConfig --colors 'features/$this->featureName.feature' > $filename & echo $!";
     $pid = exec($command);
 
     return [
